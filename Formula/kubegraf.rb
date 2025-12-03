@@ -5,21 +5,21 @@
 class Kubegraf < Formula
   desc "Advanced Kubernetes visualization tool with terminal UI and web dashboard"
   homepage "https://kubegraf.io"
-  version "1.3.0-rc2"
+  version "1.3.0-rc3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kubegraf/kubegraf/releases/download/v1.3.0-rc2/kubegraf-darwin-amd64.tar.gz"
-      sha256 "dc0953b171f3fbef94c01fb78b51e5154bfed7d4874a7e5ebd81e7f563570a2d"
+      url "https://github.com/kubegraf/kubegraf/releases/download/v1.3.0-rc3/kubegraf-darwin-amd64.tar.gz"
+      sha256 "13440e1b3902f58779c870f312a61a3ae2d3a39d892dac415ac1fc20832338a8"
 
       def install
         bin.install "kubegraf"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kubegraf/kubegraf/releases/download/v1.3.0-rc2/kubegraf-darwin-arm64.tar.gz"
-      sha256 "271c744a4558271768189ce0792228eda1d5107da03087636da5066b4ae0812f"
+      url "https://github.com/kubegraf/kubegraf/releases/download/v1.3.0-rc3/kubegraf-darwin-arm64.tar.gz"
+      sha256 "e115e3083928b4497dfdd47332674095165479cbf2708a222aadc0000442a82a"
 
       def install
         bin.install "kubegraf"
@@ -29,15 +29,15 @@ class Kubegraf < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubegraf/kubegraf/releases/download/v1.3.0-rc2/kubegraf-linux-amd64.tar.gz"
-      sha256 "4b010bcac6dd7058335766325e670ec22c5cc4e1a5963740b634ebba0cb80184"
+      url "https://github.com/kubegraf/kubegraf/releases/download/v1.3.0-rc3/kubegraf-linux-amd64.tar.gz"
+      sha256 "20cbb8c3221a754ef898a6638fc9ab380e52dc663a4140e85b237eecf53e5cde"
       def install
         bin.install "kubegraf"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubegraf/kubegraf/releases/download/v1.3.0-rc2/kubegraf-linux-arm64.tar.gz"
-      sha256 "5f92579df4c684617c9ad491ad33e9bf68904194e9f1332cff991e856c2ae84d"
+      url "https://github.com/kubegraf/kubegraf/releases/download/v1.3.0-rc3/kubegraf-linux-arm64.tar.gz"
+      sha256 "6b9180f13bcf9ade7f62de8f9da6707f4a00e1e13022fb5ed4a1dacf00822090"
       def install
         bin.install "kubegraf"
       end
