@@ -5,21 +5,21 @@
 class Kubegraf < Formula
   desc "Advanced Kubernetes visualization tool with terminal UI and web dashboard"
   homepage "https://kubegraf.io"
-  version "1.5.0"
+  version "1.6.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kubegraf/kubegraf/releases/download/v1.5.0/kubegraf-darwin-amd64.tar.gz"
-      sha256 "47084346c91375965b642f2140ebb73e19893bebfb749a742c8d95d56d0a619c"
+      url "https://github.com/kubegraf/kubegraf/releases/download/v1.6.0/kubegraf-darwin-amd64.tar.gz"
+      sha256 "1bbd93c9608acfbba78e467cf1e209b60604e8f187e3765b541c9aad59b09b32"
 
       def install
         bin.install "kubegraf"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kubegraf/kubegraf/releases/download/v1.5.0/kubegraf-darwin-arm64.tar.gz"
-      sha256 "514c32100e151e82dda609b54c442ee44e2e2208dacc814f2372577d1b60d0c9"
+      url "https://github.com/kubegraf/kubegraf/releases/download/v1.6.0/kubegraf-darwin-arm64.tar.gz"
+      sha256 "d4bb61838cb539aa3664b5c2871d1b8ca70867663a111ac1c9c189b6ef7f13fd"
 
       def install
         bin.install "kubegraf"
@@ -29,15 +29,15 @@ class Kubegraf < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubegraf/kubegraf/releases/download/v1.5.0/kubegraf-linux-amd64.tar.gz"
-      sha256 "95a2f415e884e3e6665b723ae1ad1999c5b4d87e3f52c9e457fbc57f420a49dc"
+      url "https://github.com/kubegraf/kubegraf/releases/download/v1.6.0/kubegraf-linux-amd64.tar.gz"
+      sha256 "f519d89d8c855e6816adec4a08a1903bb526653f75ad46b87185ddfc5b1dbde9"
       def install
         bin.install "kubegraf"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubegraf/kubegraf/releases/download/v1.5.0/kubegraf-linux-arm64.tar.gz"
-      sha256 "5e2b8f37f899510df690657bc080534767f9002f7ea76ca6be9d91e0d054ea7b"
+      url "https://github.com/kubegraf/kubegraf/releases/download/v1.6.0/kubegraf-linux-arm64.tar.gz"
+      sha256 "c92242b6691a2370b91c18300ff22f21e7ed1bfe729163251968ea15833c6a64"
       def install
         bin.install "kubegraf"
       end
