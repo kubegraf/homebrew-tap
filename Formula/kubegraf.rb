@@ -11,7 +11,7 @@ class Kubegraf < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/kubegraf/kubegraf/releases/download/v1.7.12/kubegraf-darwin-amd64.tar.gz"
-      sha256 "86f034e5e202a1d4e0ab47796dca9808fba70d00c9b8a1b89551e3f4f593c004"
+      sha256 "2fe58993be48ab8fa6c6e510f92ec8d3095eb561d53484a4df1a0d2419ce2963"
 
       def install
         bin.install "kubegraf"
@@ -19,7 +19,7 @@ class Kubegraf < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/kubegraf/kubegraf/releases/download/v1.7.12/kubegraf-darwin-arm64.tar.gz"
-      sha256 "edd3b190c456294829820e040d4ad236fdc67bb1bec6090b3a6630beda8684e2"
+      sha256 "fdb88f753b638c608c0cf7416062cc82eef48cdb052493fbb1be3ae25add987a"
 
       def install
         bin.install "kubegraf"
@@ -30,14 +30,14 @@ class Kubegraf < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/kubegraf/kubegraf/releases/download/v1.7.12/kubegraf-linux-amd64.tar.gz"
-      sha256 "a0001ea64d4a5b6bf9e9c3b52ecce975264a8e768c80efc77abf2424b672e126"
+      sha256 "242383d125a374898e8972bb573d1d9b7093a8237345a376349c6096427403ce"
       def install
         bin.install "kubegraf"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/kubegraf/kubegraf/releases/download/v1.7.12/kubegraf-linux-arm64.tar.gz"
-      sha256 "7e0a138df8dddd405929f751dd59e85b4bcfcacda0a2c1118a6b66edf97b8350"
+      sha256 "13044a114462dc65ae3626303945c3989973298e5f70aa5578613225d91ad4e0"
       def install
         bin.install "kubegraf"
       end
