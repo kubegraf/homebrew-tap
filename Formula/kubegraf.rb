@@ -5,10 +5,10 @@ class Kubegraf < Formula
 
   if Hardware::CPU.intel?
     url "https://github.com/kubegraf/kubegraf/releases/download/v1.7.31/kubegraf-darwin-amd64.tar.gz"
-    sha256 "979e3d0efd9ba51a8cd6bdb5dc951a376b5ace734424b3df4fe97256340ea2ab"
+    sha256 "da9736b23d89e84e317e1b7f345c82f0806f1fd0f8edceceb1f2b56a96fef06d"
   else
     url "https://github.com/kubegraf/kubegraf/releases/download/v1.7.31/kubegraf-darwin-arm64.tar.gz"
-    sha256 "499d7cd45d36ec45ea83727b060630bb94ee400d6c8d7bf99fa7c490ed440863"
+    sha256 "77e98d6a3b2161e0774b91fb4fe5a5bf2b8bcf3ccb1c3b769cc37df74163a08f"
   end
 
   def install
