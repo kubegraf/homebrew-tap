@@ -1,14 +1,14 @@
 class Kubegraf < Formula
   desc "Intelligent Kubernetes Control Center"
   homepage "https://kubegraf.io"
-  version "1.7.54"
+  version "1.7.55"
 
   if Hardware::CPU.intel?
-    url "https://github.com/kubegraf/kubegraf/releases/download/v1.7.54/kubegraf-darwin-amd64.tar.gz"
-    sha256 "cddcb0ed34c0e1e46534b6010d59ace4935333d21f6b5070fdb3f89f683c669c"
+    url "https://github.com/kubegraf/kubegraf/releases/download/v1.7.55/kubegraf-darwin-amd64.tar.gz"
+    sha256 "10f4868b7274f43d01d691ae6846dd252052bc13f8fee4da12d28789636c92b2"
   else
-    url "https://github.com/kubegraf/kubegraf/releases/download/v1.7.54/kubegraf-darwin-arm64.tar.gz"
-    sha256 "0cddbe8519bdd340b0009590313bc5f431ad3e5817a89b8890548485f439e8c0"
+    url "https://github.com/kubegraf/kubegraf/releases/download/v1.7.55/kubegraf-darwin-arm64.tar.gz"
+    sha256 "a27a66c5c8ad7edaaef0e0796491ee1d5bd9edbff832440b624a9e35683cb9e2"
   end
 
   def install
