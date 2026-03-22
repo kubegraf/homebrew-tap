@@ -5,21 +5,21 @@
 class Kubegraf < Formula
   desc "Advanced Kubernetes visualization tool with terminal UI and web dashboard"
   homepage "https://kubegraf.io"
-  version "1.7.64"
+  version "1.8.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kubegraf/kubegraf/releases/download/v1.7.64/kubegraf-1.7.64-darwin-amd64.tar.gz"
-      sha256 "ca5f726bb007a55445bf4e537d0192193c941f161ce5a965c66f0fdb9f183a5d"
+      url "https://github.com/kubegraf/kubegraf/releases/download/v1.8.1/kubegraf-1.8.1-darwin-amd64.tar.gz"
+      sha256 "42572f336727345420beb535a279900c1e12818d35eba8d31595e92e86d1c603"
 
       define_method(:install) do
         bin.install "kubegraf"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kubegraf/kubegraf/releases/download/v1.7.64/kubegraf-1.7.64-darwin-arm64.tar.gz"
-      sha256 "fdd83ef38b6b8e1f401f8fae62738a17d8f7dd33045a9a5125474f1d57aa3812"
+      url "https://github.com/kubegraf/kubegraf/releases/download/v1.8.1/kubegraf-1.8.1-darwin-arm64.tar.gz"
+      sha256 "55959625d16912e75de0b77b2663741e353c6bbf60e2594cb42c4f557b270ef4"
 
       define_method(:install) do
         bin.install "kubegraf"
@@ -29,15 +29,15 @@ class Kubegraf < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubegraf/kubegraf/releases/download/v1.7.64/kubegraf-1.7.64-linux-amd64.tar.gz"
-      sha256 "a30b9ab848b3f132fa59162290815af546f5d849e938e8b3771d5f59c1142f81"
+      url "https://github.com/kubegraf/kubegraf/releases/download/v1.8.1/kubegraf-1.8.1-linux-amd64.tar.gz"
+      sha256 "c660bf8561227bdd5113df4e02f90f463e8a61c8f20e16e64f3bd1189cf897d7"
       define_method(:install) do
         bin.install "kubegraf"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubegraf/kubegraf/releases/download/v1.7.64/kubegraf-1.7.64-linux-arm64.tar.gz"
-      sha256 "0232e5936dc0d3e16b045cd8cb9e24957e816dc2a7b0bd512d874266094ed44b"
+      url "https://github.com/kubegraf/kubegraf/releases/download/v1.8.1/kubegraf-1.8.1-linux-arm64.tar.gz"
+      sha256 "e269158ec048feccdc0371698e6a1ee9ba72c19820a0917485a9fd4c174e7a4b"
       define_method(:install) do
         bin.install "kubegraf"
       end
@@ -46,27 +46,40 @@ class Kubegraf < Formula
 
   def caveats
     <<~EOS
-      ✅ KubeGraf #{version} installed successfully!
+      ╔══════════════════════════════════════════════════════╗
+      ║   ✅  KubeGraf #{version} installed successfully!    ║
+      ╚══════════════════════════════════════════════════════╝
 
-      ─── Quick Start ──────────────────────────────────────
-      1. Start the web dashboard (opens in your browser):
+      ┌─ Quick Start ───────────────────────────────────────┐
 
-           kubegraf web
+        1. Start the web dashboard (opens in your browser):
 
-         Then visit: http://localhost:3000
+             kubegraf web
 
-      ─── First-time setup ─────────────────────────────────
-      Make sure kubectl is configured and pointing to a cluster:
+           Then visit: http://localhost:3000
 
-           kubectl config current-context
+        2. Or launch the terminal UI:
 
-      Check everything is ready:
+             kubegraf
 
-           kubegraf doctor
+      ├─ First-time setup ──────────────────────────────────┤
 
-      ─── Learn more ───────────────────────────────────────
-      Docs:    https://kubegraf.io/docs
-      Issues:  https://github.com/kubegraf/kubegraf/issues
+        Make sure kubectl is configured:
+             kubectl config current-context
+
+        Check everything is ready:
+             kubegraf doctor
+
+      ├─ Upgrade anytime ───────────────────────────────────┤
+
+             brew update && brew upgrade kubegraf
+
+      ├─ Learn more ────────────────────────────────────────┤
+
+        Docs:    https://kubegraf.io/docs
+        Issues:  https://github.com/kubegraf/kubegraf/issues
+
+      └─────────────────────────────────────────────────────┘
     EOS
   end
 
